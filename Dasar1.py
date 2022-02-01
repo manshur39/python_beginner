@@ -1,6 +1,9 @@
 
 
 
+from ntpath import altsep
+
+
 print ('hello world, saya akan mempelajari python dengan sungguh-sungguh!')
 a=10;b=9;c=1
 print(a+b+c)
@@ -431,3 +434,82 @@ print('Halo {nama_depan} {nama_belakang}'
     nama_depan ='Agus'
 )
 )
+
+#BAB 9 : Percabangan (if-elif-else)
+if True :
+    print('kode program ini akan di eksekusi')
+if False :
+    print('kode program ini tidak akan di eksekusi')
+print('kode program ini akan selalu di eksekusi karena tidak masuk dalam percabangan.')
+#Contoh penggunan ekspresi logika:
+if 5 > 10: #False
+    print('Nilai 5 lebih dari 10')
+if 10 > 5 : #True
+    print('Nilai 10 lebih dari 5')
+#blok if..else :
+nilai = 50
+print('Nilai anda adalah:',nilai,'\n')
+
+if nilai >= 70:
+    print('Selamat anda LULUS!')
+else:
+    print('Maaf anda TIDAK LULUS!')
+#Menambahkan fungsi input
+# nilai = int(input('masukan nilai anda: '))
+# print('Nilai anda adalah:',nilai,'\n')
+
+# if nilai >= 70:
+    # print('Selamat anda LULUS!')
+# else:
+    # print('Maaf anda TIDAK LULUS!')
+
+#Blok if..elif..else
+#menggunakan metode input data : 
+# nama,nilai = input('masukan nama Siswa: '), int(input('masukan nilai hasil ujian: '))
+# print ('nama siswa:',nama,'\n''hasil ujian:', nilai)
+nama,nilai = 'Asep', 89
+print('Nama Siswa:',nama,'\n''nilai ujian:',nilai)
+if nilai >= 90:
+    print('Predikat A')
+elif nilai >= 80<90:
+    print('Predikat B')
+elif nilai >= 60<80:
+    print('Predikat C')
+elif nilai >= 40<60:
+    print('Predikat D')
+else :
+    print('Predikat E')
+#Percabangan dengan operator-operator
+#Contoh untuk operator keanggotaan
+# buah_yang_tersedia = ['jeruk','mangga','melon']
+# buah_yang_dicari = input('masukan nama buah dalam huruf kecil:  ')
+
+# if buah_yang_dicari in buah_yang_tersedia:
+    # print ('Buah yang anda cari tersedia')
+# else:
+    # print('buah yang anda cari tidak tersedia')
+
+#Percabangan satu baris:
+hasil_ujian = 79
+#Contoh dengan fungsi input:
+# nilai = int(input('masukan nilai: '))
+status = 'Lulus' if hasil_ujian >=75 else 'tidak lulus'
+print (status)
+
+#Percabangan Bertingkat:
+nilai = 78
+usia = 16
+# contoh dengan fungsi input :
+# nilai = int(input('masukan nilai: '))
+# usia = int(input('masukan usia: '))
+
+if nilai >=70 :
+    if usia > 15 :
+        print('selamat kak, kakak lulus!')
+    else :
+        print('selamat dek, adek lulus!')
+else :
+    if usia > 15 :
+        print ('maaf kak, kakak tidak lulus!')
+    else :
+        print ('maaf dek, adek belum lulus!')
