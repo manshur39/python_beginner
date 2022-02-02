@@ -35,3 +35,23 @@ print('Hello' == 'Hello')
 print('hello' == 'HELLO')
 print(2+2 == 4)
 print (3+2 == 6)
+
+#Video 4 : IF_ELIF_ELSE
+#menggunakan fungsi input:
+# height = input()
+height = 1.68
+if float(height) <1 :
+    print('You cannot ride, you are under 1m')
+elif float(height) >2 :
+    print ('You cannot ride, you are over 2m')
+else : 
+    print('You can ride')
+#menentukan angka ganjil dan genap
+angka = 9
+if angka % 2 ==0 :
+    print ('Angka genap')
+else:
+    print ('Angka ganjil')
+
+
+
