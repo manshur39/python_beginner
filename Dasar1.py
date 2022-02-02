@@ -505,11 +505,95 @@ usia = 16
 
 if nilai >=70 :
     if usia > 15 :
-        print('selamat kak, kakak lulus!')
+        print('selamat kak, kakak lulus!''\n')
     else :
-        print('selamat dek, adek lulus!')
+        print('selamat dek, adek lulus!''\n')
 else :
     if usia > 15 :
-        print ('maaf kak, kakak tidak lulus!')
+        print ('maaf kak, kakak tidak lulus!''\n')
     else :
-        print ('maaf dek, adek belum lulus!')
+        print ('maaf dek, adek belum lulus!''\n')
+
+#BAB 10: Perulangan for
+#Contoh:
+listKota = ['Jakarta','Surabaya','Depok','Bekasi','Solo','Jogjakarta','Semarang','Makassar']
+
+for kota in listKota:
+    print(kota,'\n')
+
+#mengetahui urutan iterasi for dengan list
+#menggunakan fungsi #enumerate
+
+for i, kota in enumerate (listKota):
+    print(i,kota, sep='.''\n')
+
+#for dengan fungsi range()
+#Contoh buat perulangan >> ## 0 sampai 4
+for i in range (5):
+    print('perulangan ke: ', i)
+
+#contoh lain
+for i in range (10,15):
+    print('i=',i) 
+
+print('\n')
+
+#contoh bilangan genap kelipatan 2
+for i in range(2,12,2):
+    print ('i=',i)
+
+print('\n')
+
+#contoh bilangan ganjil
+for bilangan_ganjil in range (1,10,2):
+    print(bilangan_ganjil)
+print('\n')
+
+#for dengan tuple
+tupleBuah = ('Mangga','Jeruk','Pepaya','Apel')
+
+for buah_buahan in tupleBuah:
+    print (buah_buahan)
+print('\n')
+
+#for dengan string
+for i, karakter in enumerate ('Indonesia ID'):
+    print (i, karakter,sep=' > ')
+print('\n')
+#for...break & continue
+#contoh continue:
+for i in range(10,20):
+    if (i == 17):
+        continue
+    print (i)
+print('\n')
+#Fungsi break
+#contoh break:
+for i in range(10,20):
+    if(i == 17):
+        break
+    print(i)
+print('\n')
+
+#for...else + break
+#contoh:
+list_kota = ['Jakarta', 'Surabaya', 'Depok']
+#menggunakan fungsi input
+#kota_yang_dicari = input('masukan nama kota yang kamu cari: ')
+kota_dicari = 'Jakarta'
+for i, kota in enumerate(list_kota):
+    #kita ubah katanya ke lowercase 
+    #agar menjadi case sensitive
+    if kota.lower() == kota_dicari.lower():
+        print('Kota yang anda cari berada pada indeks ke : ', i)
+        break
+else:
+    print('Kota yang anda cari tidak ditemukan')
+        
+deret_angka = (10,13,18,19)
+for i in deret_angka:
+    if i %2==0 :
+        print('genap',i)
+    else :
+        print('ganjil',i)
+    
