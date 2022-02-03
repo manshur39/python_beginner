@@ -589,11 +589,97 @@ for i, kota in enumerate(list_kota):
         break
 else:
     print('Kota yang anda cari tidak ditemukan')
-        
+print('\n')
 deret_angka = (10,13,18,19)
 for i in deret_angka:
     if i %2==0 :
         print('genap',i)
     else :
         print('ganjil',i)
-    
+print('\n')
+
+#BAB 11 : Perulangan While
+#contoh:
+i = 1
+while i <=10:
+    print (i)
+    i +=1
+print ('\n')
+#perulangan while untuk list
+#fungsi len()
+nama_kota = ['Jakarta', 'Surabaya', 'Depok', 'Bekasi', 'Solo',
+  'Jogjakarta', 'Semarang', 'Makassar']
+i=0
+while i <len(nama_kota):
+    print(nama_kota[i])
+    i+=1
+print('\n')
+#fungsi .pop()
+i = 0
+while nama_kota:
+    print(nama_kota.pop(0))
+    i+=1
+
+#perulangan while dengan inputan
+
+"""Contoh : Perhatikan contoh di bawah. Pada contoh ini 
+kita akan meminta user untuk memasukkan angka ganjil lebih dari 50. 
+Jika user justru memasukkan nilai genap atau nilai yang kurang dari 50, 
+maka sistem akan meminta user untuk menginputkan kembali.""" 
+
+a = 79
+#dengan fungsi input
+# a = int(input('Masukan angka ganjil lebih dari 50: '))
+while a%2 !=1 or a<=50:
+    a = int(input('Salah, masukan lagi: '))
+print('Benar')
+print('\n')
+#perulangan while dengan continue
+nama_kota = ['Jakarta', 'Surabaya', 'Depok', 'Bekasi', 'Solo',
+  'Jogjakarta', 'Semarang', 'Makassar']
+#skip jika i adalah bilangan genap
+#dan i lebih dari 0
+i=-1
+while i < len(nama_kota):
+    i+=1
+    if i %2 == 0 and i > 0 :
+        print('skip')
+        continue
+    #tidak di eksekusi ketika continue dipanggil
+    print(nama_kota[i])
+print('\n')
+
+#Perulangan while dengan break
+nama_kota = ['Jakarta', 'Surabaya', 'Depok', 'Bekasi', 'Solo',
+  'Jogjakarta', 'Semarang', 'Makassar']
+kotaYangDicari = 'semarang'
+#dengan fungsi input
+# kotaYangDicari = input('Masukkan nama kota yang dicari: ')
+
+i = 0
+while i < len(nama_kota):
+  if nama_kota[i].lower() == kotaYangDicari.lower():
+    print('Ketemu di index', i)
+    break
+
+  print('Bukan ', nama_kota[i])
+  i += 1
+
+
+#perulangan while dengan else
+nama_kota = ['Jakarta', 'Surabaya', 'Depok', 'Bekasi', 'Solo',
+  'Jogjakarta', 'Semarang', 'Makassar']
+kotaYangDicari = 'ciamis'
+#dengan fungsi input
+# kotaYangDicari = input('Masukkan nama kota yang dicari: ')
+
+i = 0
+while i < len(nama_kota):
+  if nama_kota[i].lower() == kotaYangDicari.lower():
+    print('Ketemu di index', i)
+    break
+
+  print('Bukan ', nama_kota[i])
+  i += 1
+else:
+    print('maaf kota yang anda cari tidak ditemukan')
