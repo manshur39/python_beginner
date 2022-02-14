@@ -683,3 +683,56 @@ while i < len(nama_kota):
   i += 1
 else:
     print('maaf kota yang anda cari tidak ditemukan')
+
+#BAB 12: Perulangan Bersarang / Bertingkat
+#Alur Dasar:
+for i in range(3):
+    print('Perulangan luar [i]=', i)
+
+    for j in range(5):
+        print('perulangan dalam [i,j]= ', str(i)+','+str(j))
+#Contoh lain
+
+for baris in range (4):
+    print('O',end=' ')
+    for kolom in range (5):
+        print('X', end=' ')
+    else:
+        print(' ')
+#Menggunakan while
+#contoh1:
+max_baris = 3
+max_kolom = 4
+
+baris = 0
+while baris < max_baris:
+  kolom = 0
+  while kolom < max_kolom:
+    print('o' if kolom <= baris else '+', end= ' ')
+    kolom += 1
+  else:
+    print('wkwkw')
+  baris += 1
+ 
+#contoh2 :
+list_kota = ['jakarta','surabaya','makassar']
+
+for kota in list_kota:
+    print(kota)
+
+    list_tempat = ['taman','mall','lapangan']
+
+    while list_tempat:
+        print ('-->', list_tempat.pop(0))
+
+#Contoh lain:
+
+import re
+list_kota4 =['Solo','Surabaya','Bekasi','Jakarta']
+vokal_huruf =['a','i','u','e','o']
+
+for kota in list_kota4:
+    print('['+kota+']')
+
+    for vokal in vokal_huruf:
+        print('-->', re.sub('[aiueo]',vokal,kota))
