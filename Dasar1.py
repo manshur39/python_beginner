@@ -736,3 +736,115 @@ for kota in list_kota4:
 
     for vokal in vokal_huruf:
         print('-->', re.sub('[aiueo]',vokal,kota))
+print('\n')
+
+#BAB 13: Tipe data set
+#Cara membuat set
+#Menggunakan kurung kurawal:
+himpunan_siswa = {'Huda','Lendis','Wahid','Basith'}
+print(himpunan_siswa)
+
+#mengkonversi list ke dalam set:
+himpunan_buah = set(['mangga','apel'])
+print(himpunan_buah)
+
+#set dengan tipe data yang berbeda-beda:
+set_campuran = {'manusia','hewan',5,True,('A','B')}
+print(set_campuran)
+print('\n')
+
+#Menambah anggota pada set:
+#Menggunakan fungsi add()
+himpunan_abjad = {'a','b','c'}
+print(himpunan_abjad)
+
+#>>> menambah anggota dengan add()
+himpunan_abjad.add('d')
+himpunan_abjad.add('e')
+
+#menambah lebih dari satu anggota sekaligus
+#dengan fungsi update()
+himpunan_abjad.update({'f','g'})
+#bisa juga dengan list
+himpunan_abjad.update(['h','i'])
+
+print(himpunan_abjad)
+print('\n')
+
+#Menghapus anggota :
+#fungsi remove(nilai): Untuk menghapus nilai yang dicari. Jika nilai yang dicari tidak ada, maka akan error.
+#fungsi discard(nilai): Untuk menghapus nilai yang dicari. Jika nilai yang dicari tidak ada, tidak akan error.
+#fungsi pop(): Mengambil dan menghapus nilai yang ada di sebelah kiri.
+#fungsi clear(): Menghapus semua anggota.
+
+#praktek:
+himpunan_data= {'maya','budi',100,('a','b'),False,True}
+print(himpunan_data)
+print('')
+#akan error jika nilai 100 tidak ada dalam set
+himpunan_data.remove(100)
+print(himpunan_data)
+print('')
+#tidak akan error jika ('a','b') tidak ada dalam set
+himpunan_data.discard(('a','b'))
+print(himpunan_data)
+print('')
+#remove nilai yang ada di sebelah kiri:
+nilaiYangDihapus = himpunan_data.pop()
+print('nilaiYangDihapus= ', nilaiYangDihapus)
+print(himpunan_data)
+print('')
+#hapus semua nilai
+himpunan_data.clear()
+print(himpunan_data)
+print('')
+
+#Fungsi keanggotaan pada set
+#>>>Fungsi union (Gabungan)
+#>>>Fungsi intersection (irisan)
+#>>>Fungsi difference (selisih)
+#>>>Fungsi symmetric difference (komplement)
+#>>>Dll.
+
+#praktek:
+grup_smp = {'andi','budi','ratna','sari'}
+
+grup_sma = {'putri','ratna','andi','agus'}
+
+#operasi union :
+#cara 1 dengan simbol pipe ( | )
+print(grup_smp|grup_sma)
+#cara 2 
+print(grup_smp.union(grup_sma))
+print('')
+
+#operasi intersection :
+#cara 1 menggunakan simbol ( & )
+print(grup_smp & grup_sma)
+#cara 2 
+print(grup_smp.intersection(grup_sma))
+print('')
+
+#operasi difference
+print('\nanggota grup smp yang bukan anggota grup sma')
+#cara 1 menggunakan simbol ( - )
+print(grup_smp - grup_sma)
+#cara 2 
+print(grup_smp.difference(grup_sma))
+print('')
+print('\ndibalik, anggota grup sma yang bukan anggota grup smp: ')
+print(grup_sma - grup_smp)
+print(grup_sma.difference(grup_smp))
+print('')
+
+#symmetric difference
+print('\nanggota yang hanya ikut satu grup saja: ')
+print(grup_sma.symmetric_difference(grup_smp))
+print('')
+
+#Menampilkan anggota set dengan perulangan for
+himpunan_buah2an={'pepaya','apel','jagung','rambutan'}
+
+for buah in himpunan_buah2an:
+    print(buah)
+
