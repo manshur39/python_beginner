@@ -847,4 +847,116 @@ himpunan_buah2an={'pepaya','apel','jagung','rambutan'}
 
 for buah in himpunan_buah2an:
     print(buah)
+print('\n')
 
+#BAB 14: Struktur dictionary
+#Contoh dictionary:
+pertemuan_hari_ini = {"judul":"belajar dictionary pada python 3","tanggal":"01 februari 2021","kategori":["python","python dasar"],"page_views":10,"published":True,"share_count":{"facebook":0,"twitter":2}}
+print(pertemuan_hari_ini)
+print('')
+#>>>dictionary bersifat unique:
+artikel = {"judul":"menu masakan enak","judul":"menu masakan enak tradisional"}
+#hanya akan menampilkan item yang paling terakhir
+print(artikel)
+print('')
+
+#Cara membuat dictionary:
+#cara 1: dengan tanda kurung kurawal
+buku = {"judul:":"daun yang jatuh tidak pernah membenci angin","penulis":"tere liye"}
+
+#cara kedua menggunakan fungsi dict()
+buku = dict(judul = "daun yang jatuh tidak pernah membenci angin",penulis = "tere liye")
+
+#Cara mengakses item pada dictionary
+#cara 1: dengan menggunakan fungsi get()
+print("judul:",pertemuan_hari_ini.get("judul"))
+
+#cara 2: dengan menggunakan kurung kurawal ([])
+print("tanggal:",pertemuan_hari_ini["tanggal"])
+
+#bisa menggunakan fungsi berantai untuk dictionary bertingkat
+print("facebook share: ", pertemuan_hari_ini.get("share_count").get("facebook"))
+
+#bisa juga dengan kurung siku dua-duanya
+print("twitter share: ",pertemuan_hari_ini["share_count"]["twitter"])
+print('')
+
+#Perulangan untuk dictionary
+buku= {'judul':'hafalan shalat delisa',
+        'penulis':'tere liye'}
+
+for key in buku:
+    print(key,'-->',buku[key])
+print('')
+#bisa juga dengan fungsi .items()
+for kunci, nilai, in buku.items():
+    print(kunci,'-->', nilai)
+print('')
+
+#Mengubah nilai item
+mahasiswa = {
+    'nama':'lendis febri',
+    'asal':'Indonesia'}
+#mengubah data
+print('nama awal:',mahasiswa.get('nama'))
+mahasiswa['nama']= 'andi mukhlish'
+print('nama setelah diubah:',mahasiswa.get('nama'))
+print('')
+
+#Menambahkan item
+#contoh:
+#output none
+print('hobi',mahasiswa.get('hobi'))
+#add hobi ke dalam dictionary mahasiswa
+mahasiswa['hobi']='memancing'
+#print ulang
+print('hobi dari {} adalah {}'.format(mahasiswa.get('nama'),mahasiswa.get('hobi')))
+print('')
+
+#Menghapus dictionary:
+#1. menggunakan statement del<dict[key]>.
+#2. dictinary.pop()
+
+mahasiswa2 = {
+    'nama':'wahid abdullah',
+    'usia':18,
+    'asal':'indonesia'
+}
+
+del mahasiswa2['nama']
+mahasiswa2.pop('usia')
+mahasiswa2.pop('asal')
+
+#fungsi .pop() bisa mendapatkan nilai kembalian dari data yang telah dihapus.
+#contoh:
+pesan_singkat = {'isi':'ISI PESAN INI HANYA BISA DIBACA SEKALI SAJA!!'}
+
+isi_pesan = pesan_singkat.pop('isi')
+#akses langsung dari dictionary
+# output: None
+print('isi pesan:', pesan_singkat.get('isi'))
+#akses dari hasil kembalian yang telah disimpan
+print('isi pesan dengan fungsi pop(): ', isi_pesan)
+print('')
+
+#Operator keanggotaan
+siswa ={
+    'nama':'Renza Ilhami'
+}
+
+print('apakah variabel siswa memiliki key nama?')
+print('nama' in siswa)
+
+print('\nApakah variabel siswa TIDAK memiliki key usia?')
+print('usia' not in siswa)
+print('')
+
+#Panjang atau banyak key pada dictionary
+#contoh:
+sekolah = {
+    'nama':'SDN 1 Surabaya',
+    'jenjang': 'sekolah dasar',
+    'akreditasi':'A'
+}
+
+print('jumlah atribut variabel sekolah adalah:',len(sekolah))
