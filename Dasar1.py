@@ -960,3 +960,89 @@ sekolah = {
 }
 
 print('jumlah atribut variabel sekolah adalah:',len(sekolah))
+print('\n')
+
+#BAB 15: Fungsi def
+#contoh sintaks def:
+def halo_dunia():
+    print('hello world :)')
+#cara memanggil fungsi:
+halo_dunia()
+print('')
+#cara memanggil fungsi dengan argumen/parameter:
+def selamat_datang (nama):
+    print(f'halo {nama}, selamat datang!')
+
+selamat_datang('nurul')
+selamat_datang('asep')
+selamat_datang('ujang')
+selamat_datang('siti')
+print('')
+#Parameter wajib
+def perkenalan (nama, asal):
+    print(f'halo, perkenalkan saya {nama} dari {asal}')
+perkenalan ('asep','ciamis')
+print('')
+#Parameter opsional/default
+def suhu_udara(daerah,derajat,satuan =' celcius'):
+    print(f'suhu di {daerah} adalah {derajat}{satuan}')
+suhu_udara('Bandung',24)
+suhu_udara('surabaya',32,' Fahrenheit')
+print('\n')
+#Fungsi dengan parameter tidak berurut:
+def suhu_udara2(daerah,derjat = 30,satuan=' celcius'):
+    print(f'suhu di {daerah} adalah {derjat}{satuan}')
+suhu_udara2('Jakarta','fahrenheit') #>>> output : suhu di Jakarta adalah fahrenheit celcius
+
+#cara menegatasi:
+suhu_udara2('Jakarta',satuan=' fahrenheit') #>>> output : suhu di Jakarta adalah 30 fahrenheit
+
+#sekarang bisa memanggilnya bahkan secara tidak berurutan:
+suhu_udara2(satuan='kelvin',daerah=' makassar',derjat= 100)
+print('')
+
+#Fungsi yang mengembalikan nilai:
+def luas_persegi (sisi):
+    return (sisi*sisi)
+print(luas_persegi(10))
+print('luas persegi dengan nilai 4 adalah: ',luas_persegi(4))
+#kita juga bisa simpan di dalam variabel:
+persegi_besar=luas_persegi(100)
+persegi_kecil=luas_persegi(50)
+print('Total luas persegi besar dan kecil adalah: ',persegi_besar + persegi_kecil)
+
+#lebih dari 1 return:
+def presentasi (total,jumlah):
+    if(total >= 0 and total <=jumlah):
+        return total/jumlah*100
+    return False
+
+print(presentasi(30,60))
+print(presentasi(100,70))
+print('')
+
+#Ruang lingkup dan siklus hidup variabel pada fungsi
+#1.variabel global
+#2.variabel lokal
+#contoh:
+kota = 'lamongan'
+def test():
+    print(kota)
+
+print('[print secara langsung]', kota)
+print('[print panggil fungsi test]', end=' ')
+test()
+#ubah kode programnya:
+kota,provinsi = 'Lamongan','Jawa Timur' #>>>Variabel global
+
+def hello():
+    provinsi='Jawa Barat' #>>>Variabel lokal
+    print(kota,provinsi)
+
+print('[PANGGIL FUNGSI hello()]')
+hello()
+
+print('\n[SECARA LANGSUNG]')
+print(kota,provinsi)
+print('')
+
