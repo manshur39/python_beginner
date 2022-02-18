@@ -1046,3 +1046,45 @@ print('\n[SECARA LANGSUNG]')
 print(kota,provinsi)
 print('')
 
+#BAB 16: Fungsi rekursif (4 contoh program)
+#Contoh: Menampilkan angka 1-10 dengan fungsi rekursif:
+#step 1: Buat dasarnya terlebih dahulu
+def tampilkanAngka (i):
+    print(f'perulangan ke {i}')
+
+#panggil beberapa kali
+tampilkanAngka(1)
+tampilkanAngka(2)
+tampilkanAngka(3)
+print('\n')
+
+#step 2: Tentukan batasnya
+def tampilkanAngka (batas, i=1):
+    print(f'perulangan ke {i}')
+
+#panggil beberapa kali untuk mensimulasikan
+#cara kerja
+tampilkanAngka(3)
+tampilkanAngka(3,2)
+tampilkanAngka(3,3)
+print('\n')
+
+#step 3: Rekursifitas! panggil diri sendiri
+def tampilkanAngka (batas, i=1):
+    print(f'perulangan ke {i}')
+    if (i < batas):
+        tampilkanAngka(batas, i + 1) #disinilah rekursifitas terjadi
+    
+    #untuk memanggil fungsi tampilkan angka
+    #untuk pertama kali
+tampilkanAngka(10)
+print('\n')
+
+#alur perjalanan program rekursif
+#kita balik proses rekursif dahulu baru print
+def tampilkanAngka (batas, i=1):
+    if (i < batas):
+        tampilkanAngka(batas, i + 1) #proses rekursif
+    print(f'perulangan ke {i}')
+
+print(tampilkanAngka(10))
