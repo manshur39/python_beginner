@@ -52,6 +52,16 @@ if angka % 2 ==0 :
     print ('Angka genap')
 else:
     print ('Angka ganjil')
+print('\n')
 
-
+#Video 5 : Chained conditionals and nested statements
+y=1
+x=4
+if y ==2:
+    if x ==3:
+        print('y=2, x=3')
+    else:
+        print('y=2, x!=3')
+else:
+    print('x!=2, y!=3')
 

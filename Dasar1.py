@@ -1088,3 +1088,4 @@ def tampilkanAngka (batas, i=1):
     print(f'perulangan ke {i}')
 
 print(tampilkanAngka(10))
+
