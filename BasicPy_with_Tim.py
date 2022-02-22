@@ -103,3 +103,22 @@ color = (255,255,255)
 position = (1,'two',3.0)
 print(type(position))
 print(type(color))
+print('\n')
+
+#Video 9: Iteration by item
+buah_buahan = ['apel','alpukat','pepaya','pisang','jambu']
+for buah in buah_buahan:
+    print(buah)
+#cara 2:
+for buah in buah_buahan:
+    if buah == 'alpukat':
+        print('alpukat')
+    else :
+        print('bukan alpukat')
+#cara 3:
+for x in range(len(buah_buahan)):
+    if buah_buahan[x] == 'pisang':
+        print('ini pisang')
+    else : 
+        print('bukan pisang')
+    
