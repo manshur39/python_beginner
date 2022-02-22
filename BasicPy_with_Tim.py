@@ -55,8 +55,8 @@ else:
 print('\n')
 
 #Video 5 : Chained conditionals and nested statements
-y=1
-x=4
+y=2
+x=6
 if y ==2:
     if x ==3:
         print('y=2, x=3')
@@ -65,3 +65,41 @@ if y ==2:
 else:
     print('x!=2, y!=3')
 
+print('\n')
+
+#Video 6: for loops
+for x in range (10): #(stop)
+    print(x,end=',')
+print('\n')
+
+for x in range (2,6): #(start,stop)
+    print(x,end=',')
+print('\n')
+
+for x in range (3,20,2): #(start,stop,step)
+    print(x,end=',')
+print('\n')
+
+#Video 7: While loops
+loop = 4
+while loop==4:
+    password=input('insert your password: ')
+    if password=='stop':
+        break
+print('\n')
+
+#Video 8: List and tuple
+#Tipe data list
+fruits = ['apple','pear']
+print(fruits)
+print(fruits[1]) #mengambil isi item list/indexing
+fruits.append('strawberry') #menambah item list
+print(fruits)
+fruits[1]='avocado' #mengubah isi item list
+print(fruits)
+print('\n')
+#Tuple
+color = (255,255,255)
+position = (1,'two',3.0)
+print(type(position))
+print(type(color))
