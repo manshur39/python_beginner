@@ -135,3 +135,13 @@ text3 ='MuhaMMaD tM'
 print(text3.upper())
 print(text3.lower())
 print(len(text3))
+print('\n')
+#Video 11: Slice operator
+buahh = ['jeruk','apel','pisang','alpukat','naga']
+teks = 'aku suka python'
+print(buahh[0:4:2]) #[start:stop:step]
+print(teks[3:8])
+print(buahh[:3])
+print(buahh[2:])
+buahh[1:1]=['pepaya']
+print(buahh)
