@@ -5,6 +5,9 @@
 #print("Hallo", name)
 
 #aritmatika operator:
+import string
+
+
 num1= 20
 num2 = 5
 print(num1 + num2)
@@ -145,3 +148,31 @@ print(buahh[:3])
 print(buahh[2:])
 buahh[1:1]=['pepaya']
 print(buahh)
+print('\n')
+#Video 12: Function
+def addTwo(x):
+   print(x + 2)
+addTwo(5)
+
+def dikurangDua(x):
+    print(x-2)
+dikurangDua(10)
+
+def String():
+    print('hai')
+def tulisan(teks):
+    print(teks)
+String()
+tulisan('my name is taufik')
+
+def luasPpanjang(panjang,lebar):
+    Luas = panjang*lebar
+    return Luas
+print(luasPpanjang(3,5))
+
+def luasSegitiga(alas,tinggi):
+    L = (0.5*alas*tinggi)
+    print(L)
+luasSegitiga(4,6)
+
+
