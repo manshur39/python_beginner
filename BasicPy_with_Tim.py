@@ -121,4 +121,17 @@ for x in range(len(buah_buahan)):
         print('ini pisang')
     else : 
         print('bukan pisang')
-    
+print('\n')
+
+#Video 10: String methods
+#split
+text ='tes metod split'
+print(text.split())
+#strip
+text2=   'hallo gugel'
+print(text2.strip())
+#upper, lower, len
+text3 ='MuhaMMaD tM'
+print(text3.upper())
+print(text3.lower())
+print(len(text3))
