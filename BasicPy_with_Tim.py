@@ -201,3 +201,7 @@ if teks5.count('+')>0:
 else:
     print('tidak ada penambahan')
 
+#Video 16: Introduction to modular programming
+import myModule
+print(myModule.func(3))
+print(myModule.newfunc(5))
