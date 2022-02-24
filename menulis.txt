@@ -1,0 +1,3 @@
+hallo
+my name is tm,
+ and now im learning how to write text file in pyhton

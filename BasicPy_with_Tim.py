@@ -87,7 +87,7 @@ print('\n')
 loop = 4
 while loop==4:
     password=input('insert your password: ')
-    if password=='stop':
+    if password=='tmbahagia':
         break
 print('\n')
 
@@ -174,5 +174,30 @@ def luasSegitiga(alas,tinggi):
     L = (0.5*alas*tinggi)
     print(L)
 luasSegitiga(4,6)
+print('\n')
+#Video 13: How to read a text file
+file = open('text.txt','r')
+f = file.readlines()
+print(f)
+newtext=[]
+for teks in f:
+    newtext.append(teks.strip())
+print(newtext)
+print('\n')
 
+#Video 14: How to write a text file
+test1= open('menulis.txt','w')
+test1.write('hallo\n')
+test1.write('my name is tm,\n and now im learning how to write text file in pyhton')
+test1.close()
+
+#Video 15: Using .count() and .find()
+tekss ='helooo'
+print(tekss.find('e'))
+print(tekss.count('o'))
+teks5='lima ikan tenggiri + sepuluh telur ayam + satu kilogram engkol'
+if teks5.count('+')>0:
+    print('ada penambahan')
+else:
+    print('tidak ada penambahan')
 
