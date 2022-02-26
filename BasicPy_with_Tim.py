@@ -230,3 +230,20 @@ try:
     print(nomor)
 except:
     print('username salah')
+
+#Video 19: Global vs Local variables
+new_var = 'ini adalah variabel global'   #>>>Variabel global
+
+def fungsites():
+    new_var = 7 #>>>Variabel local
+    print(new_var) 
+
+print(new_var)
+fungsites()
+
+#cara merubah nilai variabel global
+def fungsites():
+    global new_var  #>>>kode mengubah variabel global
+    new_var = 'nilai variabel global sudah di ubah'
+    print(new_var)
+fungsites()
