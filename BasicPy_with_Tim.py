@@ -205,3 +205,21 @@ else:
 import myModule
 print(myModule.func(3))
 print(myModule.newfunc(5))
+
+#Video 17: Optional parameters
+def fungsi1 (x=10, tekss='ganteng'): #fungsi default
+    print (x)
+    if tekss == '1':
+        print('tekss is one')
+    else:
+        print('tekss is not one')
+fungsi1() 
+#fungsi non default
+def fungsi1 (x, tekss):
+    print (x)
+    if tekss == '1':
+        print('tekss is one')
+    else:
+        print('tekss is not one')
+fungsi1(10, '1') 
+
