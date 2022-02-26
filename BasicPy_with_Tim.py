@@ -84,8 +84,8 @@ for x in range (3,20,2): #(start,stop,step)
 print('\n')
 
 #Video 7: While loops
-loop = 4
-while loop==4:
+loop = 1
+while loop==1:
     password=input('insert your password: ')
     if password=='tmbahagia':
         break
@@ -215,11 +215,18 @@ def fungsi1 (x=10, tekss='ganteng'): #fungsi default
         print('tekss is not one')
 fungsi1() 
 #fungsi non default
-def fungsi1 (x, tekss):
+def fungsi2 (x, tekss):
     print (x)
     if tekss == '1':
         print('tekss is one')
     else:
         print('tekss is not one')
-fungsi1(10, '1') 
+fungsi2(10, '1') 
 
+#Video 18: Try and except (python error handling)
+tes123 = input('username: ')
+try:
+    nomor = int(tes123)
+    print(nomor)
+except:
+    print('username salah')
