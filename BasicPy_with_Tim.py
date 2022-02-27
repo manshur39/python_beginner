@@ -247,3 +247,15 @@ def fungsites():
     new_var = 'nilai variabel global sudah di ubah'
     print(new_var)
 fungsites()
+
+#Video 20: Classes and objects
+class number:
+    def __init__(self,num):
+        self.var = num
+    
+    def display(self,x):
+        print(x)
+num = number(23)
+num.display(num.var)
+        
+      
